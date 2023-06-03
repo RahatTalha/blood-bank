@@ -54,7 +54,7 @@ const SignUp = () => {
                 </div>
                 <input className='btn-submit' type="submit" value="Sign Up" />
             </form>
-            <p>Already Have an Account <Link to='/login'>Login</Link></p>
+            <p>Already Have an Account ? <p className='font-bold underline'><Link to='/login'>Login</Link></p></p>
             <p className='text-error'>{error}</p>
         </div>
     );

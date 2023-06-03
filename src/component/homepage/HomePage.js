@@ -6,21 +6,44 @@ const HomePage = () => {
     const { user, logOut } = useContext(AuthContext)
     return (
         <div>
-           
-           {
-                    user?.uid ?
-                       <div>
-                        <p>Welcome:{user?.email}</p>
-                         <button className='btn-submit' onClick={logOut}>Log out</button>
-                       </div>
-                        :
-                        <>
-                            <Link to="/login">Login</Link>
-                            <Link to="/signup">Sign up</Link>
-                        </>
-                }
 
-           
+            {
+                user?.uid ?
+                    <div>
+                        <h1 class="text-3xl font-bold">Welcome:{user?.email} </h1>
+                        <button class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={logOut}>Log out</button>
+
+                        <div className='flex justify-center items-center mt-[300px]'>
+                            <p className='text-6xl font-bold'>C</p>
+                            <div className='w-9 h-9 border-8 border-dashed rounded-full animate-spin mt-3 border-yellow-400'></div>
+                            <p className='text-6xl font-bold'>ming S</p>
+                            <div className='w-9 h-9 border-8 border-dashed rounded-full animate-spin mt-3 border-yellow-400'></div>
+                            <div className='w-9 h-9 border-8 border-dashed rounded-full animate-spin mt-3 border-yellow-400'></div>
+                            <p className='text-6xl font-bold'>n.....</p>
+                        </div>
+
+                    </div>
+                    :
+                    <>
+
+                        <button class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-5"><Link to="/login">Login</Link></button>
+
+
+                        <button class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><Link to="/signup">Sign up</Link></button>
+
+
+                        <div className='flex justify-center items-center mt-[300px]'>
+                            <p className='text-6xl font-bold'>C</p>
+                            <div className='w-9 h-9 border-8 border-dashed rounded-full animate-spin mt-3 border-yellow-400'></div>
+                            <p className='text-6xl font-bold'>ming S</p>
+                            <div className='w-9 h-9 border-8 border-dashed rounded-full animate-spin mt-3 border-yellow-400'></div>
+                            <div className='w-9 h-9 border-8 border-dashed rounded-full animate-spin mt-3 border-yellow-400'></div>
+                            <p className='text-6xl font-bold'>n.....</p>
+                        </div>
+                    </>
+            }
+
+
         </div>
     );
 };

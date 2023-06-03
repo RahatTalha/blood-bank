@@ -39,7 +39,7 @@ const Login = () => {
                 </div>
                 <input className='btn-submit' type="submit" value="Login" />
             </form>
-            <p>New to Blood Bank? <Link to='/signup'>Create a New Account</Link></p>
+            <p>New to Blood Bank? <Link to='/signup'><p className='underline font-bold'>Create a New Account</p></Link></p>
         </div>
     );
 };
