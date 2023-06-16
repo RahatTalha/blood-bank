@@ -19,7 +19,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 form.reset();
-                 navigate('/home')
+                 navigate('/allhome')
                
             })
             .catch(error => console.error(error));
